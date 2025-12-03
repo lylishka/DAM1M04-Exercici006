@@ -1,12 +1,26 @@
+:root {
+    --color-principal: #8a2be2;
+    --color-prinicipalHover: #6a1baa;
+    --colorFonsPagina: #f8f8ff;
+    --colorFonsFormulari: #ffffff;
+    --colorText: #333333;
+    --colorBordeNormal: #dcdcdc;
+    --colorValid: #4caf50;
+    --colorInvalid: #e53935;
+    --colorNavText: #ffffff;
+}
+
 body {
-    background-color: rgba(250, 250, 250, 1);
+    background-color: var(--colorFonsPagina);
+    color: var(--colorText);
+    padding: 30px;
 }
 
 /* Material Icons */
 .material-symbols-outlined {
   font-size: 24px;
-  transform: translateY(5px);
-  margin-right: 5px;
+  transform: translateY(7px);
+  margin-right: 8px;
 }
 
 /* Barra de Navegació */
@@ -18,19 +32,18 @@ body {
     height: 65px; 
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background: rgba(137, 43, 226, 1); 
+    background: var(--color-principal); 
     backdrop-filter: blur(20px) saturate(150%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.50);
-    box-shadow: 0 2px 12px rgba(137, 43, 226, 0.3);
+    box-shadow: 0 2px 12px var(--color-principal);
     box-sizing: border-box;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
     gap: 40px;
     padding: 0;
     margin: 0;
@@ -40,15 +53,42 @@ body {
 }
 
 .menu a {
-    color: rgba(255, 255, 255, 1);
+    color: var(--colorNavText);
     text-decoration: none;
-    font-size: 18px;    
+    font-size: 18px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
 }
 
 .menu a:hover {
-    color: rgba(220, 220, 220, 1);
+    color: #e0e0e0;
 }
 
 .menu span {
     margin-right: 5px;
+}
+
+/* ESTILS PER index.html */
+form.formulario {
+    margin: 50px auto;
+    padding: 40px;
+    width: 500px;
+    height: auto;
+    background-color: var(--colorFonsFormulari);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(var(--colorBordeNormal));
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.campo {
+    margin-bottom: 30px;
+    position: relative;
 }

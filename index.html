@@ -5,6 +5,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="estils.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         <title>Formulari i Validació</title>
     </head>
     <body>
@@ -14,5 +17,132 @@
                 <li><a href="interaccio.html"><span class="material-symbols-outlined">touch_app</span>Interactivitat amb CSS</a></li></a></li>
             </ul>
         </nav>
+        <form class="formulario">
+            <h3><span class="material-symbols-outlined">frame_person</span> Personals i Contacte</h3>
+            <div class="campo">
+                <label for="nombre">Nom i cognoms</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder=" "
+                    required
+                    pattern="^[A-Za-zÀ-ÿ\s][2,]$"
+                    title="Mínim 2 lletres. No s'admeten números ni caràcters especials."
+                >
+                <p class="error">Mínim 4 lletres i espais. Sense números.</p>
+            </div>
+            <div class="campo">
+                <label for="correo">Correu elèctronic</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="nom@exemple.com"
+                    required
+                >
+                <p class="error">Introdueix un correu electrònic vàlid.</p>
+            </div>
+            <div class="campo">
+                <label for="telefono">Telèfon (9 dígits)</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder=" "
+                    required
+                    pattern="^[0-9]{9}$"
+                    title="El telèfon ha de tenir 9 dígits sense espais ni guions."
+                >
+                <p class="error">El telèfon ha de exactament tenir 9 dígits númerics.</p>
+            </div>
+
+            <h3><span class="material-symbols-outlined">calendar_month</span> Data i Preferències</h3>
+            <div class="campo">
+                <label for="nacimiento">Nom i cognoms</label>
+                <input
+                    type="date"
+                    id="nacimiento"
+                    name="nacimiento"
+                    required
+                >
+                <p class="error">Aquest camp és oblogatori.</p>
+            </div>
+            <div class="campo">
+                <label for="edad">Edad (18-99)</label>
+                <input
+                    type="number"
+                    id="edad"
+                    name="edad"
+                    min="18"
+                    max="99"
+                    placeholder=" "
+                    required
+                >
+                <p class="error">L'edad ha de ser entre 18 i 99 anys.</p>
+            </div>
+            <div class="campo">
+                <label for="horaContacto">Hora de contacte preferida</label>
+                <input type="time" id="horaContacto" name="horaContacto">
+            </div>
+            <div class="campo">
+                <label for="colorprefirido">Color preferit</label>
+                <input type="color" id="colorprefirido" name="colorprefirido" value="#8a2be2">
+            </div>
+            <div class="campo">
+                <label for="satisfecho">Nivel de satisfacció (1 a 100)</label>
+                <input type="range" id="satisfecho" name="satisfecho" min="1" max="100" value="75">
+            </div>
+
+            <h3><span class="material-symbols-outlined">checklist</span> Selecció i Feedback</h3>
+            <div class="campo">
+                <label for="pais">País de residència</label>
+                <input list="pais" id="pais" name="pais" placeholder="Tria una opció" required>
+                <datalist id="pais">
+                    <option value="Espanya">
+                    <option value="França">
+                    <option value="Alemanya">
+                    <option value="Itàlia">
+                    <option value="Portugal">
+                    <option value="Suècia">
+                    <option value="Noruega">
+                    <option value="Finlàndia">
+                    <option value="Estats Units">
+                    <option value="Mèxic">
+                    <option value="Colòmbia">
+                    <option value="Argentina">
+                    <option value="Xina">
+                    <option value="Rússia">
+                    <option value="Japó">
+                    <option value="Finlàndia">
+                    <option value="Corea del Sud">
+                </datalist>
+                <p class="error">Has de seleccionar un país de la llista.</p>
+            </div>
+            <div class="campo">
+                <label for="correo">Correu elèctronic</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="nom@exemple.com"
+                    required
+                >
+                <p class="error">Introdueix un correu electrònic vàlid.</p>
+            </div>
+            <div class="campo">
+                <label for="telefono">Telèfon (9 dígits)</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder=" "
+                    required
+                    pattern="^[0-9]{9}$"
+                    title="El telèfon ha de tenir 9 dígits sense espais ni guions."
+                >
+                <p class="error">El telèfon ha de exactament tenir 9 dígits númerics.</p>
+            </div>
+        </form>
     </body>
 </html>
