@@ -12,6 +12,8 @@
     --color-Valid-rgb: 76, 175, 80;
     --color-Invalid-rgb: 229, 57, 53;
     --sombraFocus: 0 0 4px rgba(var(--color-principal-rgb), 0.2);
+    --colorRadioCheckFons: #fff;
+    
 }
 
 body {
@@ -97,4 +99,262 @@ h3 {
 .campo {
     margin-bottom: 30px;
     position: relative;
+}
+
+
+.campo input[list],
+.campo input[type="date"],
+.campo input[type="datetime-local"],
+.campo input[type="email"],
+.campo input[type="month"],
+.campo input[type="number"],
+.campo input[type="search"],
+.campo input[type="tel"],
+.campo input[type="text"],
+.campo input[type="time"],
+.campo input[type="week"] {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 10px 12px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.campo select,
+.campo textarea {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 10px 12px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.campo textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.campo input[list]:focus,
+.campo input[type="date"]:focus,
+.campo input[type="datetime-local"]:focus,
+.campo input[type="email"]:focus,
+.campo input[type="month"]:focus,
+.campo input[type="number"]:focus,
+.campo input[type="search"]:focus,
+.campo input[type="tel"]:focus,
+.campo input[type="text"]:focus,
+.campo input[type="time"]:focus,
+.campo input[type="week"]:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--color-principal);
+  outline: none;
+}
+
+.fixedLabel {
+  color: var(--color-principal);
+  font-size: 12px;
+  left: -5px;
+}
+
+.campo select:not([multiple]) {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #888 50%),
+    linear-gradient(135deg, #888 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px),
+    calc(100% - 30px) 0;
+  background-repeat: no-repeat;
+  background-size: 6px 6px, 6px 6px, 1px 100%;
+  padding-right: 36px;
+}
+
+.campo select[multiple] {
+  height: auto;
+  padding-right: 10px;
+}
+
+.error {
+  color: #d00;
+  display: none;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.campo input:invalid:not(:placeholder-shown):not(:focus) + .error {
+  display: block;
+}
+
+.campo input[type="color"] {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 36px;
+  margin-top: 6px;
+  padding: 0;
+  width: 60px;
+}
+
+.campo input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.campo input[type="range"]::-webkit-slider-runnable-track {
+  background: #ccc;
+  border-radius: 3px;
+  height: 6px;
+}
+
+.campo input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--color-principal);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  margin-top: -6px;
+  transition: background 0.2s ease;
+  width: 18px;
+}
+
+.campo input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--color-prinicipalHover);
+}
+
+.campo input[type="range"]::-moz-range-track {
+  background: #ccc;
+  border-radius: 3px;
+  height: 6px;
+}
+
+.campo input[type="range"]::-moz-range-thumb {
+  background: var(--color-principal);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}
+
+.opciones-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.opcion-seleccion {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.opcion-seleccion input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--colorRadioCheckFons);
+    border: 2px solid var(--color-principal);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.opcion-seleccion input[type="radio"] ~ .checkmark {
+    border-radius: 50%;
+}
+
+.opcion-seleccion:hover input ~ .checkmark {
+    background-color: #eee;
+}
+
+.opcion-seleccion input:checked ~ .checkmark {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.opcion-seleccion input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.opcion-seleccion input:checked ~ .checkmark:after {
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+}
+
+.opcion-seleccion input[type="checkbox"] ~ .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.button-contenedor {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+button {
+  background: var(--color-principal);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: var(--color-prinicipalHover);
+}
+
+button.reset-button {
+    background: #f44336;
+}
+
+button.reset-button:hover {
+    background: #d32f2f;
 }

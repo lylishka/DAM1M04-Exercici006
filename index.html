@@ -14,7 +14,7 @@
        <nav class="topnav">
             <ul class="menu">
                 <li><a href="index.html"><span class="material-symbols-outlined">forms_apps_script</span>Forms i Validació</a></li>
-                <li><a href="interaccio.html"><span class="material-symbols-outlined">touch_app</span>Interactivitat amb CSS</a></li></a></li>
+                <li><a href="interaccio.html"><span class="material-symbols-outlined">touch_app</span>Interactivitat amb CSS</a></li>
             </ul>
         </nav>
         <form class="formulario">
@@ -66,7 +66,6 @@
                     name="nacimiento"
                     required
                 >
-                <p class="error">Aquest camp és oblogatori.</p>
             </div>
             <div class="campo">
                 <label for="edad">Edad (18-99)</label>
@@ -82,8 +81,8 @@
                 <p class="error">L'edad ha de ser entre 18 i 99 anys.</p>
             </div>
             <div class="campo">
-                <label for="horaContacto">Hora de contacte preferida</label>
-                <input type="time" id="horaContacto" name="horaContacto">
+                <label for="hora">Hora de Contacte</label>
+                <input type="time" id="hora" name="hora">
             </div>
             <div class="campo">
                 <label for="colorprefirido">Color preferit</label>
@@ -98,23 +97,24 @@
             <div class="campo">
                 <label class="fixedlabel" for="pais">País de residència</label>
                 <select id="pais" name="pais" required>
-                    <option value="Espanya">
-                    <option value="França">
-                    <option value="Alemanya">
-                    <option value="Itàlia">
-                    <option value="Portugal">
-                    <option value="Suècia">
-                    <option value="Noruega">
-                    <option value="Finlàndia">
-                    <option value="Estats Units">
-                    <option value="Mèxic">
-                    <option value="Colòmbia">
-                    <option value="Argentina">
-                    <option value="Xina">
-                    <option value="Rússia">
-                    <option value="Japó">
-                    <option value="Finlàndia">
-                    <option value="Corea del Sud">
+                    <option value="">Tria un país</option>
+                    <option value="Espanya">Espanya</option>
+                    <option value="França">França</option>
+                    <option value="Alemanya">Alemanya</option>
+                    <option value="Itàlia">Itàlia</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Suècia">Suècia</option>
+                    <option value="Noruega">Noruega</option>
+                    <option value="Finlàndia">Finlàndia</option>
+                    <option value="Estats Units">Estats Units</option>
+                    <option value="Mèxic">Mèxic</option>
+                    <option value="Colòmbia">Colòmbia</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Xina">Xina</option>
+                    <option value="Rússia">Rússia</option>
+                    <option value="Japó">Japó</option>
+                    <option value="Finlàndia">Finlàndia</option>
+                    <option value="Corea del Sud">Corea del Sud</option>
                 </select>
                 <p class="error">Has de seleccionar un país.</p>
             </div>
@@ -127,12 +127,12 @@
                         Home
                     </label>
                     <label class="opcion-seleccion">
-                        <input type="radio" id="pro_app" name="genere" value="Dona" required>
+                        <input type="radio" id="genera_d" name="genere" value="Dona" required>
                         <span class="checkmark"></span>
                         Dona
                     </label>
                     <label class="opcion-seleccion">
-                        <input type="radio" id="pro_api" name="genere" value="Prefereixo no dir" required>
+                        <input type="radio" id="genera_pnd" name="genere" value="Prefereixo no dir" required>
                         <span class="checkmark"></span>
                         Prefereixo no dir
                     </label>
@@ -147,12 +147,12 @@
                         Ofertes especials i promocions
                     </label>
                     <label class="opcion-seleccion">
-                        <input type="checkbox" id="pro_app" name="preferencies" value="Notícies" required>
+                        <input type="checkbox" id="pref_noticias" name="preferencies" value="Notícies" required>
                         <span class="checkmark"></span>
                         Notícies i actualizacions del servei
                     </label>
                     <label class="opcion-seleccion">
-                        <input type="checkbox" id="pro_api" name="preferencies" value="Altre" required>
+                        <input type="checkbox" id="pref_otros" name="preferencies" value="Altre" required>
                         <span class="checkmark"></span>
                         Alertes de seguretat i avisos importants
                     </label>
@@ -162,8 +162,10 @@
                 <label class="fixedlabel" for="comentarios">Comentaris o Suggeriments</label>
                 <textarea id="comentarios" name="comentarios" placeholder="Escriu aquí..." ></textarea>
             </div>
-            <button type="submit">Enviar</button>
-            <button type="reset" class="reset-button">Esborrar</button>
+            <div class="button-contenedor">
+                <button type="submit">Enviar</button>
+                <button type="reset" class="reset-button">Esborrar</button>
+            </div>
         </form>
     </body>
 </html>
