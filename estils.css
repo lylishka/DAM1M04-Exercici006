@@ -4,10 +4,14 @@
     --colorFonsPagina: #f8f8ff;
     --colorFonsFormulari: #ffffff;
     --colorText: #333333;
-    --colorBordeNormal: #dcdcdc;
+    --colorBordeNormal: #ccc;
     --colorValid: #4caf50;
     --colorInvalid: #e53935;
     --colorNavText: #ffffff;
+    --color-principal-rgb: 138, 43, 226;
+    --color-Valid-rgb: 76, 175, 80;
+    --color-Invalid-rgb: 229, 57, 53;
+    --sombraFocus: 0 0 4px rgba(var(--color-principal-rgb), 0.2);
 }
 
 body {
@@ -34,11 +38,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-principal); 
-    backdrop-filter: blur(20px) saturate(150%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
-    box-shadow: 0 2px 12px var(--color-principal);
+    background: rgba(var(--color-principal-rgb), 0.75); 
+    backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.75);
     box-sizing: border-box;
+    transition: background 0.3s ease;
 }
 
 .menu {
@@ -61,7 +67,7 @@ body {
 }
 
 .menu a:hover {
-    color: #e0e0e0;
+    color: #f0f0f0;
 }
 
 .menu span {
@@ -81,7 +87,7 @@ form.formulario {
 
 h3 {
     color: var(--color-principal);
-    border-bottom: 2px solid var(var(--colorBordeNormal));
+    border-bottom: 2px solid var(--colorBordeNormal);
     padding-bottom: 15px;
     margin-top: 15px;
     margin-bottom: 30px;

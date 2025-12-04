@@ -59,7 +59,7 @@
 
             <h3><span class="material-symbols-outlined">calendar_month</span> Data i Preferències</h3>
             <div class="campo">
-                <label for="nacimiento">Nom i cognoms</label>
+                <label for="nacimiento">Data de Naiximent</label>
                 <input
                     type="date"
                     id="nacimiento"
@@ -96,9 +96,8 @@
 
             <h3><span class="material-symbols-outlined">checklist</span> Selecció i Feedback</h3>
             <div class="campo">
-                <label for="pais">País de residència</label>
-                <input list="pais" id="pais" name="pais" placeholder="Tria una opció" required>
-                <datalist id="pais">
+                <label class="fixedlabel" for="pais">País de residència</label>
+                <select id="pais" name="pais" required>
                     <option value="Espanya">
                     <option value="França">
                     <option value="Alemanya">
@@ -116,33 +115,55 @@
                     <option value="Japó">
                     <option value="Finlàndia">
                     <option value="Corea del Sud">
-                </datalist>
-                <p class="error">Has de seleccionar un país de la llista.</p>
+                </select>
+                <p class="error">Has de seleccionar un país.</p>
             </div>
             <div class="campo">
-                <label for="correo">Correu elèctronic</label>
-                <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    placeholder="nom@exemple.com"
-                    required
-                >
-                <p class="error">Introdueix un correu electrònic vàlid.</p>
+                <label class="fixedlabel">Génere</label>
+                <div class="opciones-grupo">
+                    <label class="opcion-seleccion">
+                        <input type="radio" id="genere_h" name="genere" value="Home" required>
+                        <span class="checkmark"></span>
+                        Home
+                    </label>
+                    <label class="opcion-seleccion">
+                        <input type="radio" id="pro_app" name="genere" value="Dona" required>
+                        <span class="checkmark"></span>
+                        Dona
+                    </label>
+                    <label class="opcion-seleccion">
+                        <input type="radio" id="pro_api" name="genere" value="Prefereixo no dir" required>
+                        <span class="checkmark"></span>
+                        Prefereixo no dir
+                    </label>
+                </div>
             </div>
             <div class="campo">
-                <label for="telefono">Telèfon (9 dígits)</label>
-                <input
-                    type="tel"
-                    id="telefono"
-                    name="telefono"
-                    placeholder=" "
-                    required
-                    pattern="^[0-9]{9}$"
-                    title="El telèfon ha de tenir 9 dígits sense espais ni guions."
-                >
-                <p class="error">El telèfon ha de exactament tenir 9 dígits númerics.</p>
+                <label class="fixedlabel">Vols rebre notificacions?</label>
+                <div class="opciones-grupo">
+                    <label class="opcion-seleccion">
+                        <input type="checkbox" id="pref_ofertas" name="preferencies" value="Ofertes" required>
+                        <span class="checkmark"></span>
+                        Ofertes especials i promocions
+                    </label>
+                    <label class="opcion-seleccion">
+                        <input type="checkbox" id="pro_app" name="preferencies" value="Notícies" required>
+                        <span class="checkmark"></span>
+                        Notícies i actualizacions del servei
+                    </label>
+                    <label class="opcion-seleccion">
+                        <input type="checkbox" id="pro_api" name="preferencies" value="Altre" required>
+                        <span class="checkmark"></span>
+                        Alertes de seguretat i avisos importants
+                    </label>
+                </div>
             </div>
+            <div class="campo">
+                <label class="fixedlabel" for="comentarios">Comentaris o Suggeriments</label>
+                <textarea id="comentarios" name="comentarios" placeholder="Escriu aquí..." ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            <button type="reset" class="reset-button">Esborrar</button>
         </form>
     </body>
 </html>
