@@ -1,26 +1,29 @@
 :root {
-    --color-principal: #8a2be2;
-    --color-prinicipalHover: #6a1baa;
-    --colorFonsPagina: #f8f8ff;
-    --colorFonsFormulari: #ffffff;
-    --colorText: #333333;
-    --colorBordeNormal: #ccc;
-    --colorValid: #4caf50;
-    --colorInvalid: #e53935;
-    --colorNavText: #ffffff;
-    --color-principal-rgb: 138, 43, 226;
-    --color-Valid-rgb: 76, 175, 80;
-    --color-Invalid-rgb: 229, 57, 53;
-    --sombraFocus: 0 0 4px rgba(var(--color-principal-rgb), 0.2);
-    --colorRadioCheckFons: #fff;
+  --color-principal: #8a2be2;
+  --color-prinicipalHover: #6a1baa;
+  --colorFonsPagina: #f8f8ff;
+  --colorFonsFormulari: #ffffff;
+  --colorText: #333333;
+  --colorBordeNormal: #ccc;
+  --colorValid: #4caf50;
+  --colorInvalid: #e53935;
+  --colorNavText: #ffffff;
+  --color-principal-rgb: 138, 43, 226;
+  --color-Valid-rgb: 76, 175, 80;
+  --color-Invalid-rgb: 229, 57, 53;
+  --sombraFocus: 0 0 4px rgba(var(--color-principal-rgb), 0.2);
+  --colorRadioCheckFons: #fff;
     
 }
 
 body {
-    background-color: var(--colorFonsPagina);
-    color: var(--colorText);
-    padding: 30px;
-    font-family: 'Montserrat', sans-serif;
+  background-color: var(--colorFonsPagina);
+  color: var(--colorText);
+  padding: 20p 10px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Material Icons */
@@ -78,10 +81,11 @@ body {
 }
 
 /* ESTILS PER index.html */
-form.formulario {
+.formulario {
   margin: 50px auto;
-  padding: 40px;
-  width: 500px;
+  padding: 30px;
+  max-width: 550px;
+  width: 100%;
   height: auto;
   background-color: var(--colorFonsFormulari);
   border-radius: 12px;
@@ -326,4 +330,34 @@ button.reset-button {
 
 button.reset-button:hover {
   background: #d32f2f;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  /* ESTILS PER index.html */
+  .formulario {
+    padding: 15px;
+    width: 87%;
+  } 
+
+  .formulario h3 {
+    font-size: 1.2rem; 
+  }
+
+  .campo select, .campo select option {
+    font-size: 14px;
+  }
+
+  .button-contenedor {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-contenedor button {
+   width: 100%;
+  }
 }
