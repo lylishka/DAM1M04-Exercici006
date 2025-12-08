@@ -13,51 +13,63 @@
     <body id="pagina-interaccio">
         <input type="checkbox" id="menu-toggle">
         <nav class="topnav">
-        <label for ="menu-toggle" class="menu-icon"><span class="material-symbols-outlined">menu</span></label>
+            <label for ="menu-toggle" class="menu-icon"><span class="material-symbols-outlined">menu</span></label>
             <ul class="menu">
-                <li><a href="index.html"><span class="material-symbols-outlined">forms_apps_script</span>Forms i Validació</a></li>
-                <li><a href="interaccio.html"><span class="material-symbols-outlined">touch_app</span>Interactivitat amb CSS</a></li>
+                <li><a href="index.html"><span class="material-symbols-outlined">forms_apps_script</span>Formulari de Registre</a></li>
+                <li><a href="interaccio.html"><span class="material-symbols-outlined">touch_app</span>Música Interactiva</a></li>
             </ul>
         </nav>
         <div class="contenedor-principal">
+            <h1><span class="material-symbols-outlined">artist</span> Artistes de Música Japonesa</h1>
             <div class="pestañas-contenedor">
-                <h2><span class="material-symbols-outlined">tab</span> Pestanyes CSS</h2>
+                <h2>Galeria d'Artistes</h2>
                 <div class="tabs">
                     <input type="radio" name="tab-group" id="tab1" checked>
                     <input type="radio" name="tab-group" id="tab2">
                     <input type="radio" name="tab-group" id="tab3">
                     <div class="tabs-buttons">
-                        <label for="tab1">Pestanya 1</label>
-                        <label for="tab2">Pestanya 2</label>
-                        <label for="tab3">Pestanya 3</label>
+                        <label for="tab1">Ado</label>
+                        <label for="tab2">9Lana</label>
+                        <label for="tab3">Rosu (ロス)</label>
                     </div>
                     <div class="tab-contenido">
                         <div class="contenido contenido-1">
-                            <h3>Contingut de la Pestanya A</h3>
+                            <h3>Ado - La Veu Misteriosa</h3>
+                            <p>Ado és coneguda per la seva poderosa veu i per no revelar la seva aparença.</p>
+                            <img src="assets/img/ado.jpg">
                         </div>
                         <div class="contenido contenido-2">
-                            <h3>Contingut de la Pestanya B</h3>
+                            <h3>9Lana - Talent Emergent</h3>
+                            <p>9Lana és una vocalista i creadora de contigut destacada per les seves versions i temes originals.</p>
+                            <img src="assets/img/9lana.jpg">
                         </div>
                         <div class="contenido contenido-3">
-                            <h3>Contingut de la Pestanya C</h3>
+                            <h3>Rosu / ロス - El So Únic</h3>
+                            <p>Rosu / ロス és una artista amb un estil distintiu que fusiona diversos gèneres musicals.</p>
+                            <img src="assets/img/rosu.png">
                         </div>                                                
                     </div>
                 </div>
             </div>
         </div>
         <div class="panel-opciones">
-            <h2><span class="material-symbols-outlined">switch_access_shortcut</span></h2>
+            <h2><span class="material-symbols-outlined">music_note</span> Selecció de Vídeos</h2>
             <div class="opciones-panell">
                 <input type="radio" name="opcio-extra" id="opcio1" checked>
-                <label for="opcio1" class="opcio-label">Opció 1</label> 
+                <label for="opcio1" class="opcio-label">Ado - Gira Gira</label> 
                 <input type="radio" name="opcio-extra" id="opcio2">
-                <label for="opcio2" class="opcio-label">Opció 2</label>
+                <label for="opcio2" class="opcio-label">9Lana - BALALAIKA</label>
+                <input type="radio" name="opcio-extra" id="opcio3">
+                <label for="opcio3" class="opcio-label">Rosu - あの娘は邪惡！</label>
                 <div class="panell-contenido">
                     <div class="panell panell-opcio1">
-                        <p>Panel Actiu 1.</p>
+                        <video src="assets/media/Gira_Gira.mp4" controls autoplay></video>
                     </div>
                     <div class="panell panell-opcio2">
-                        <p>Panel Actiu 2.</p>
+                        <video src="assets/media/Balaika.mp4" controls autoplay></video>
+                    </div>
+                    <div class="panell panell-opcio3">
+                        <video src="assets/media/cancion_rosu.mp4" controls autoplay></video>
                     </div>
                 </div>
             </div>
