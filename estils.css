@@ -1,3 +1,4 @@
+/* ESTILS GENERALS */
 :root {
   --color-principal: #8a2be2;
   --color-prinicipalHover: #6a1baa;
@@ -54,14 +55,14 @@ body {
 }
 
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    padding: 0;
-    margin: 0;
-    flex-wrap: nowrap;     
-    overflow-x: auto;        
-    scrollbar-width: none;  
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;     
+  overflow-x: auto;        
+  scrollbar-width: none;  
 }
 
 .menu a {
@@ -79,6 +80,9 @@ body {
 .menu span {
   margin-right: 5px;
 }
+
+
+
 
 /* ESTILS PER index.html */
 .formulario {
@@ -340,7 +344,7 @@ button.reset-button:hover {
   display: none;
 }
 
-.mwnu-icon {
+.menu-icon {
   display: none;
   font-size: 28px;
   padding: 10px;
@@ -458,9 +462,42 @@ button.reset-button:hover {
 
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
+  /* ESTILS GENERALS */
   body {
     padding: 10px;
   }
+
+  .topnav {
+    justify-content: space-between;
+    height: 50px;
+  }
+  
+  .topnav .menu {
+    max-height: 0;
+    max-width: 90%;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgba(var(--color-principal-rgb), 0.98);
+    border-radius: 10px;
+  }
+
+  .topnav .menu li {
+    max-width: 90%;
+    margin: 5px auto;
+    border-radius: 9px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .topnav .menu li a {
+    padding: 12px 20px;
+  }
+
+
 
   /* ESTILS PER index.html */
   .formulario {
@@ -483,5 +520,19 @@ button.reset-button:hover {
 
   .button-contenedor button {
    width: 100%;
+  }
+
+
+
+  /* ESTILS PER interaccio.html */
+  .menu-icon {
+    display: block;
+    padding: 10px 15px;
+    color: var(--colorNavText);
+    cursor: pointer;
+  }
+  
+  #menu-toggle:checked + .topnav .menu {
+    max-height: 700px; 
   }
 }
