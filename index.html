@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="estils.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:opsz,wght@8..60,376&display=swap" rel="stylesheet">
+
         <title>Formulari i Validació</title>
     </head>
     <body>
@@ -27,10 +28,10 @@
                     name="nombre"
                     placeholder=" "
                     required
-                    pattern="^[A-Za-zÀ-ÿ\s][2,]$"
-                    title="Mínim 2 lletres. No s'admeten números ni caràcters especials."
+                    pattern="^[A-Za-zÀ-ÿ]{2,}(\s[A-Za-zÀ-ÿ]{2,})*$"
+                    title="Mínim 2 lletres per paraula. Sense números ni caràcters especials."
                 >
-                <p class="error">Mínim 4 lletres i espais. Sense números.</p>
+                <p class="error">Mínim 2 lletres i espais. Sense números ni caràcters especials.</p>
             </div>
             <div class="campo">
                 <label for="correo">Correu elèctronic</label>
@@ -82,10 +83,10 @@
             </div>
             <div class="campo">
                 <label for="hora">Hora de Contacte</label>
-                <input type="time" id="hora" name="hora">
+                <input type="time" id="hora" name="hora" required>
             </div>
             <div class="campo">
-                <label for="colorprefirido">Color preferit</label>
+                <label for="colorprefirido">Color preferit</label></br>
                 <input type="color" id="colorprefirido" name="colorprefirido" value="#8a2be2">
             </div>
             <div class="campo">
@@ -121,19 +122,16 @@
             <div class="campo">
                 <label class="fixedlabel">Génere</label>
                 <div class="opciones-grupo">
-                    <label class="opcion-seleccion">
+                    <label>
                         <input type="radio" id="genere_h" name="genere" value="Home" required>
-                        <span class="checkmark"></span>
                         Home
                     </label>
-                    <label class="opcion-seleccion">
+                    <label>
                         <input type="radio" id="genera_d" name="genere" value="Dona" required>
-                        <span class="checkmark"></span>
                         Dona
                     </label>
-                    <label class="opcion-seleccion">
+                    <label>
                         <input type="radio" id="genera_pnd" name="genere" value="Prefereixo no dir" required>
-                        <span class="checkmark"></span>
                         Prefereixo no dir
                     </label>
                 </div>
@@ -141,19 +139,16 @@
             <div class="campo">
                 <label class="fixedlabel">Vols rebre notificacions?</label>
                 <div class="opciones-grupo">
-                    <label class="opcion-seleccion">
-                        <input type="checkbox" id="pref_ofertas" name="preferencies" value="Ofertes" required>
-                        <span class="checkmark"></span>
+                    <label>
+                        <input type="checkbox" id="pref_ofertas" name="preferencies" value="Ofertes">
                         Ofertes especials i promocions
                     </label>
-                    <label class="opcion-seleccion">
-                        <input type="checkbox" id="pref_noticias" name="preferencies" value="Notícies" required>
-                        <span class="checkmark"></span>
+                    <label>
+                        <input type="checkbox" id="pref_noticias" name="preferencies" value="Notícies">
                         Notícies i actualizacions del servei
                     </label>
-                    <label class="opcion-seleccion">
-                        <input type="checkbox" id="pref_otros" name="preferencies" value="Altre" required>
-                        <span class="checkmark"></span>
+                    <label>
+                        <input type="checkbox" id="pref_otros" name="preferencies" value="Altre">
                         Alertes de seguretat i avisos importants
                     </label>
                 </div>

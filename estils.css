@@ -20,6 +20,7 @@ body {
     background-color: var(--colorFonsPagina);
     color: var(--colorText);
     padding: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Material Icons */
@@ -31,22 +32,22 @@ body {
 
 /* Barra de Navegació */
 .topnav {
-    position: sticky;
-    top: 20px;
-    z-index: 1000;
-    width: 100%;
-    height: 65px; 
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(var(--color-principal-rgb), 0.75); 
-    backdrop-filter: blur(10px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.75);
-    box-sizing: border-box;
-    transition: background 0.3s ease;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  width: 100%;
+  height: 65px; 
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(var(--color-principal-rgb), 0.75); 
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.75);
+  box-sizing: border-box;
+  transition: background 0.3s ease;
 }
 
 .menu {
@@ -61,44 +62,44 @@ body {
 }
 
 .menu a {
-    color: var(--colorNavText);
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 0;
-    transition: color 0.3s ease;
+  color: var(--colorNavText);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
 }
 
 .menu a:hover {
-    color: #f0f0f0;
+  color: #f0f0f0;
 }
 
 .menu span {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 /* ESTILS PER index.html */
 form.formulario {
-    margin: 50px auto;
-    padding: 40px;
-    width: 500px;
-    height: auto;
-    background-color: var(--colorFonsFormulari);
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  margin: 50px auto;
+  padding: 40px;
+  width: 500px;
+  height: auto;
+  background-color: var(--colorFonsFormulari);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 h3 {
-    color: var(--color-principal);
-    border-bottom: 2px solid var(--colorBordeNormal);
-    padding-bottom: 15px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    font-weight: 600;
+  color: var(--color-principal);
+  border-bottom: 2px solid var(--colorBordeNormal);
+  padding-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .campo {
-    margin-bottom: 30px;
-    position: relative;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 
@@ -117,10 +118,10 @@ h3 {
   border: 2px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  font-family: "Montserrat", sans-serif;
   padding: 10px 12px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.2s ease;
   width: 100%;
 }
 
@@ -129,11 +130,11 @@ h3 {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 6px;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box; 
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
   padding: 10px 12px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.2s ease;
   width: 100%;
 }
 
@@ -157,6 +158,9 @@ h3 {
 .campo textarea:focus {
   border-color: var(--color-principal);
   outline: none;
+  font-family: "Montserrat", sans-serif;
+  transform: border-color 0.3s ease, transform 0.2s ease;
+  box-shadow: var(--sombraFocus);
 }
 
 .fixedLabel {
@@ -194,6 +198,22 @@ h3 {
 
 .campo input:invalid:not(:placeholder-shown):not(:focus) + .error {
   display: block;
+}
+
+.campo input:valid:not(:focus):not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+.campo select:valid:not(:focus), .campo textarea:valid:not(:focus) {
+  box-shadow: var(--colorValid);
+}
+
+.campo input:invalid:not(:focus):not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+.campo select:invalid:not(:focus), .campo textarea:invalid:not(:focus) {
+  box-shadow: var(--colorInvalid);
+}
+
+
+.campo input[required]:not(:focus):not([type="range"]):not([type="checkbox"]):not([type="range"]):not([type="radio"]),
+.campo select[required]:not(:focus), .campo textarea[required]:not(:focus) {
+  box-shadow: 0 0 0 1px rgba(var(--color-principal-rgb), 0.1);
 }
 
 .campo input[type="color"] {
@@ -252,87 +272,36 @@ h3 {
 }
 
 .opciones-grupo {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.opcion-seleccion {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-    font-size: 16px;
+.opciones-grupo label {
+  align-items: center;
+  color: var(--colorText);
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  gap: 6px;
 }
 
-.opcion-seleccion input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+.opciones-grupo input[type="radio"], .opciones-grupo input[type="checkbox"] {
+  accent-color: var(--color-principal);
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  transition: transform 0.2s ease;
 }
 
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: var(--colorRadioCheckFons);
-    border: 2px solid var(--color-principal);
-    border-radius: 4px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.opcion-seleccion input[type="radio"] ~ .checkmark {
-    border-radius: 50%;
-}
-
-.opcion-seleccion:hover input ~ .checkmark {
-    background-color: #eee;
-}
-
-.opcion-seleccion input:checked ~ .checkmark {
-    background-color: var(--color-principal);
-    border-color: var(--color-principal);
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.opcion-seleccion input:checked ~ .checkmark:after {
-    display: block;
-}
-
-.opcion-seleccion input:checked ~ .checkmark:after {
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: white;
-    transform: translate(-50%, -50%);
-}
-
-.opcion-seleccion input[type="checkbox"] ~ .checkmark:after {
-    left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
+.opciones-grupo input[type="radio"]:active, .opciones-grupo input[type="checkbox"]:active {
+  transform: scale(1.2);
 }
 
 .button-contenedor {
-    display: flex;
-    gap: 15px;
-    margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
 }
 
 button {
@@ -352,9 +321,9 @@ button:hover {
 }
 
 button.reset-button {
-    background: #f44336;
+  background: #f44336;
 }
 
 button.reset-button:hover {
-    background: #d32f2f;
+  background: #d32f2f;
 }
