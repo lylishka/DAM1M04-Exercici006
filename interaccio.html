@@ -10,12 +10,57 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:opsz,wght@8..60,376&display=swap" rel="stylesheet">
         <title>Interactivitat amb CSS</title>
     </head>
-    <body>
-       <nav class="topnav">
+    <body id="pagina-interaccio">
+        <input type="checkbox" id="menu-toggle">
+        <nav class="topnav">
+        <label for ="menu-toggle" class="menu-icon"><span class="material-symbols-outlined">menu</span></label>
             <ul class="menu">
                 <li><a href="index.html"><span class="material-symbols-outlined">forms_apps_script</span>Forms i Validació</a></li>
                 <li><a href="interaccio.html"><span class="material-symbols-outlined">touch_app</span>Interactivitat amb CSS</a></li></a></li>
             </ul>
         </nav>
+        <div class="contenedor-principal">
+            <div class="pestañas-contenedor">
+                <h2><span class="material-symbols-outlined">tab</span> Pestanyes CSS</h2>
+                <div class="tabs">
+                    <input type="radio" name="tab-group" id="tab1" checked>
+                    <input type="radio" name="tab-group" id="tab2">
+                    <input type="radio" name="tab-group" id="tab3">
+                    <div class="tabs-buttons">
+                        <label for="tab1">Pestanya 1</label>
+                        <label for="tab2">Pestanya 2</label>
+                        <label for="tab3">Pestanya 3</label>
+                    </div>
+                    <div class="tab-contenido">
+                        <div class="contenido contenido-1">
+                            <h3>Contingut de la Pestanya A</h3>
+                        </div>
+                        <div class="contenido contenido-2">
+                            <h3>Contingut de la Pestanya B</h3>
+                        </div>
+                        <div class="contenido contenido-3">
+                            <h3>Contingut de la Pestanya C</h3>
+                        </div>                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-opciones">
+            <h2><span class="material-symbols-outlined">switch_access_shortcut</span></h2>
+            <div class="opciones-panell">
+                <input type="radio" name="opcio-extra" id="opcio1" checked>
+                <label for="opcio1" class="opcio-label">Opció 1</label> 
+                <input type="radio" name="opcio-extra" id="opcio2">
+                <label for="opcio2" class="opcio-label">Opció 2</label>
+                <div class="panell-contenido">
+                    <div class="panell panell-opcio1">
+                        <p>Panel Actiu 1.</p>
+                    </div>
+                    <div class="panell panell-opcio2">
+                        <p>Panel Actiu 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

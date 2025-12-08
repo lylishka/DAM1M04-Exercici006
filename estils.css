@@ -332,8 +332,132 @@ button.reset-button:hover {
   background: #d32f2f;
 }
 
+
+
+
+/* ESTILS PER interaccio.html */
+#menu-toggle {
+  display: none;
+}
+
+.mwnu-icon {
+  display: none;
+  font-size: 28px;
+  padding: 10px;
+  color: var(--colorNavText);
+  cursor: pointer;
+}
+
+.contenedor-principal {
+  max-width: 900px;
+  width: 90%;
+  margin: 30px auto;
+  padding-top: 50px;
+}
+
+.pestañas-contenedor {
+  background: var(--colorFonsFormulari);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs-buttons {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tabs-buttons label {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+  color: #666;
+}
+
+#tab1:checked ~ .tabs-buttons label[for="tab1"],
+#tab2:checked ~ .tabs-buttons label[for="tab2"],
+#tab3:checked ~ .tabs-buttons label[for="tab3"] {
+  border-bottom: 3px solid var(--color-principal);
+  color: var(--color-principal);
+}
+
+.tab-contenido > .contenido {
+  display: none;
+  padding: 15px 0;
+}
+
+#pagina-interaccio:has(#tab1:checked) .contenido-1,
+#pagina-interaccio:has(#tab2:checked) .contenido-2,
+#pagina-interaccio:has(#tab3:checked) .contenido-3 {
+  display: block;
+}
+
+.panell-opciones {
+  background-color: var(--colorFonsFormulari);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opciones-panell input[type="radio"] {
+  display: none;
+}
+
+.opcio-label {
+  display: inline-block;
+  padding: 8px 15px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--colorBordeNormal);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s, color 0.3s;
+}
+
+#opcio1:checked + .opcio-label[for="opcio1"],
+#opcio2:checked + .opcio-label[for="opcio2"] {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  color: white;
+}
+
+.panell-contenido .panell {
+  display: none;
+  padding: 15px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.panell-opcio1 {
+  background-color: var(--colorValid);
+  color: white;
+}
+
+.panell-opcio2 {
+  background-color: #4682b4;
+  color: white;
+}
+
+#opcio1:checked ~ .panell-contenido .panell-opcio1 {
+  display: block;
+}
+
+#opcio2:checked ~ .panell-contenido .panell-opcio2 {
+  display: block;
+}
+
+
+
+
 /* MEDIA QUERIES */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
     padding: 10px;
   }
